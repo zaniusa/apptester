@@ -1,0 +1,26 @@
+<div class="page-header">
+  <h1>Apps Links</h1>
+</div>
+
+<div class="well">
+  <%= link_to "Add New Link", new_linkctr_path, class: "btn btn-success btn-large" %>
+
+  <% @linkctrs.each do |linkctr| %>
+    <div class="row">
+      <div class="span2">
+        <p><strong><%= linkctr.name %></strong></p>
+      </div>
+      <div class="span4">
+        <p><%= linkctr.urlLink %></p>
+      </div>
+      <div class="span2">
+        <div class="btn-group">
+          <button class="btn"><%= link_to "Show", linkctr %></button>
+          <button class="btn"><%= link_to "Edit", edit_linkctr_path(linkctr) %></button>
+          <button class="btn"><%= link_to "Delete", linkctr, method: :delete, data: { confirm: "Are you sure you want to delete this link?"} %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+

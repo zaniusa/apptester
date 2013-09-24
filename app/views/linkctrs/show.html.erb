@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @linkctr.name %>
+</p>
+
+<p>
+  <strong>Urllink:</strong>
+  <%= @linkctr.urlLink %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @linkctr.detail %>
+</p>
+
+<%= link_to 'Edit', edit_linkctr_path(@linkctr) %> |
+<%= link_to 'Back', linkctrs_path %>

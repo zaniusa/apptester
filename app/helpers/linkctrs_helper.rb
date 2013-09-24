@@ -1,0 +1,2 @@
+module LinkctrsHelper
+end

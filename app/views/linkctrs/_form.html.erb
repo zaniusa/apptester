@@ -1,0 +1,29 @@
+<%= form_for(@linkctr) do |f| %>
+  <% if @linkctr.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@linkctr.errors.count, "error") %> prohibited this linkctr from being saved:</h2>
+
+      <ul>
+      <% @linkctr.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :urlLink %><br>
+    <%= f.text_field :urlLink %>
+  </div>
+  <div class="field">
+    <%= f.label :detail %><br>
+    <%= f.text_area :detail %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
